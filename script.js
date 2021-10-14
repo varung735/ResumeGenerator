@@ -25,3 +25,46 @@ function addNewQual(){
 
     qualOb.insertBefore(newNode, qualAddButtonOb);
 }
+
+//function to generate CV
+
+function generateCV(){
+    let nameFieldOb = document.getElementById("nameField").value;
+    let nameTempOb = document.getElementById("nameTemp");
+    nameTempOb.innerHTML = nameFieldOb;
+    
+    document.getElementById("nameTemp2").innerHTML = nameFieldOb;
+    document.getElementById("contactTemp").innerHTML = document.getElementById("contactField").value;
+    document.getElementById("addressTemp").innerHTML = document.getElementById("addressField").value; 
+    document.getElementById("linkedInTemp").innerHTML = document.getElementById("linkedInField").value;
+    document.getElementById("hackerRankTemp").innerHTML = document.getElementById("hackerRankField").value;
+    document.getElementById("stackOverflowTemp").innerHTML = document.getElementById("stackOverflowField").value;
+    document.getElementById("objectiveTemp").innerHTML = document.getElementById("objectiveField").value;
+
+    let wes = document.getElementsByClassName("weField");
+    let str = '';
+
+    for(let e of wes){
+        str = str + `<li> ${e.value} </li>`;
+    }
+
+    document.getElementById("weTemp").innerHTML = str;
+
+    let quals = document.getElementsByClassName("qualField");
+    let str1 = '';
+
+    for(let q of quals){
+        str1 = str1 + `<li> ${q.value}</li>`;
+    }
+
+    document.getElementById("qualTemp").innerHTML = str1;
+
+    document.getElementById("cv-form").style.display='none';
+    document.getElementById("cv-template").style.display='block';
+}
+
+//function to print CV in template
+
+function printCV(){
+    window.print();
+}
