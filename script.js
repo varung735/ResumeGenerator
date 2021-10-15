@@ -59,6 +59,22 @@ function generateCV(){
 
     document.getElementById("qualTemp").innerHTML = str1;
 
+    //code for uploading profile photo
+
+    let file = document.getElementById("imgField").files[0];
+
+    console.log(file);
+
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    console.log(reader.result);
+
+    //set the image into template
+
+    reader.onloadend = function () {
+        document.getElementById("imgTemp").src = reader.result;
+    }
+
     document.getElementById("cv-form").style.display='none';
     document.getElementById("cv-template").style.display='block';
 }
