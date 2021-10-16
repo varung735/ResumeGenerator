@@ -3,8 +3,10 @@ function addNewWEField(){
     newNode.classList.add('form-control');
     newNode.classList.add('weField');
     newNode.classList.add('mt-2');
+    newNode.classList.add('iconInsideTextArea');
     newNode.setAttribute("rows", 3);
     newNode.setAttribute("placeholder", "Enter your work experience here");
+    newNode.setAttribute("onClick", "testFunction()")
 
     let weOb = document.getElementById("we");
     let weAddButtonOb = document.getElementById("weAddButton");
@@ -24,6 +26,13 @@ function addNewQual(){
     let qualAddButtonOb = document.getElementById("qualAddButton");
 
     qualOb.insertBefore(newNode, qualAddButtonOb);
+}
+
+//test function
+
+function testFunction(){
+    // alert("Function is active");
+    
 }
 
 //function to generate CV
