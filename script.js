@@ -4,6 +4,7 @@ function addNewWEField(){
     newNode.classList.add('weField');
     newNode.classList.add('mt-2');
     newNode.classList.add('iconInsideTextArea');
+    newNode.setAttribute("id", "generatedNode");
     newNode.setAttribute("rows", 3);
     newNode.setAttribute("placeholder", "Enter your work experience here");
     newNode.setAttribute("onClick", "testFunction()")
@@ -31,9 +32,11 @@ function addNewQual(){
 //test function
 
 function testFunction(){
-    // alert("Function is active");
-    
-}
+    alert("Function is active");
+    // let genNode = document.getElementById("generatedNode");
+    // let parent = genNode.parent;
+    // parent.removeChild(genNode);
+} 
 
 //function to generate CV
 

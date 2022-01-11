@@ -15,8 +15,12 @@
     background-image: url("images/x-circle.svg");
     background-position: 99% 6.8%;
     background-repeat: no-repeat;
+}
+
+.iconInsideTextArea:hover{
     cursor: pointer;
 }
+
 
 /* .bi::before {
   display: inline-block;
